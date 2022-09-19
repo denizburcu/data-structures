@@ -6,9 +6,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int[] myIntegers = getIntegers(5);
+        int[] array = new int[6];
+        System.out.println(array[4]);
+        try {
+            System.out.println(array[6]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println(e);
+        }
+
+       /* int[] myIntegers = getIntegers(5);
         int[] sorted = sortIntegers(myIntegers);
-        printArray(sorted);
+        printArray(sortIntegers(myIntegers)); */
     }
 
     public static int[] getIntegers(int capacity) {
@@ -25,25 +33,22 @@ public class Main {
             System.out.println("Element " + i + " contents " + array[i]);
         }
     }
+
     public static int[] sortIntegers(int[] array) {
-        int[]  sortedArray = new int[array.length];
-        for(int i=0; i<array.length; i++) {
-            sortedArray[i] = array[i];
-        }
 
         boolean flag = true;
         int temp;
-        while (flag){
+        while (flag) {
             flag = false;
-            for(int i=0; i<sortedArray.length-1; i++) {
-                if(sortedArray[i] < sortedArray[i+1]) {
-                    temp = sortedArray[i];
-                    sortedArray[i] = sortedArray[i+1];
-                    sortedArray[i+1] = temp;
+            for (int i = 0; i < array.length - 1; i++) {
+                if (array[i] < array[i + 1]) {
+                    temp = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = temp;
                     flag = true;
                 }
             }
         }
-        return sortedArray;
+        return array;
     }
 }
