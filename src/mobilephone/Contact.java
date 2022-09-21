@@ -17,11 +17,9 @@ public class Contact {
         return phoneNumber;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public static Contact createContact(String name, String phoneNumber){
+        return new Contact(name, phoneNumber);
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
+
 }
