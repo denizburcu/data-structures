@@ -15,6 +15,7 @@ public class MobilePhoneMain {
             int action = scanner.nextInt();
             scanner.nextLine();
 
+
             switch (action) {
                 case 0:
                     System.out.println("\n Shutting down...");
