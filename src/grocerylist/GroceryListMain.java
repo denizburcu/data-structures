@@ -1,6 +1,4 @@
-package GroceryList;
-
-import GroceryList.GroceryList;
+package grocerylist;
 
 import java.util.Scanner;
 

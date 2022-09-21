@@ -1,4 +1,4 @@
-package GroceryList;
+package grocerylist;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,7 @@ public class GroceryList {
     private ArrayList<String> groceryList = new ArrayList<>();
 
     public void addGroceryItem(String item) {
-        groceryList.add(item);
+            groceryList.add(item);
     }
 
     public void printGroceryList() {
@@ -23,16 +23,17 @@ public class GroceryList {
 
     public void removeGroceryItem(int position) {
         String theItem = groceryList.get(position);
-        System.out.println("Grocery item " + theItem + " has been removed.");
         groceryList.remove(position);
     }
 
     public String findItem(String searchItem) {
-        //boolean exists = groceryList.contains(searchItem);
-        int position = groceryList.indexOf(searchItem);
-        if (position >= 0) {
-            return groceryList.get(position);
+        boolean exists = groceryList.contains(searchItem);
+
+        int positions = groceryList.indexOf(searchItem);
+        if (positions >= 0) {
+            return groceryList.get(positions);
         }
+
         return null;
     }
 }
